@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+
+*{
+    margin: 0; /*Tarayıcının varsayılan kenar boşluklarını kaldırır.*/
+    padding: 0; /*Tarayıcının varsayılan kenar boşluklarını kaldırır.*/
+    box-sizing: border-box; /*Sayfa kaymasın ve scroll çıkmaması için.*/
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.container{
+    height: 100vh; /*Sayfayı pencereye sığdırır.*/
+    width: 100%; /*Sayfayı pencereye sığdırır.*/
+    padding-right: 8%; /*Container'ı body'inin sağından iteledik.*/
+    padding-left: 8%; /*Container'ı body'inin solundan iteledik.*/
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(images/bg.png); /*Arkaplana görsel vermek ve rgba'ları da arkaplanı hafif karalaştırmak için kullandım.*/
+    background-position: center; /*Arkaplanın kayan tarafını kurtarmak için ortaladık.*/
+    background-size: cover; /*Arkaplanı tam olarak sığdırmak için.*/
+
+}
+
+p{
+    font-size: 12px;
+    color: #fff;
+    line-height: 16px; /*p etiketi içerisindeki satırlar arası yükseklik ayarını yapmaya yarar.*/
+}
+
+.btn{
+    padding: 12px 28px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: ease,0.7s;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar{
+    height: 12%;
+    display: flex; /*Alt alta gelen divleri yan yana almaya yarar.*/
+    justify-content: space-between; /*İki divi birbirinden uzaklaştırır.*/
+    align-items: center; /*İçindeki itemleri ortalar.*/
+}
+
+nav ul li a {
+    color: #fff; /*a etiketinin rengini değiştirmek için..*/
+    text-decoration: none; /*a etiketinin altındaki çizgiyi kaldırır.*/
+    transition: ease,0.8s; /*İmleç ile üzerine geldiğimizde değişen renk aşamasının hızını belirledim.*/
+}
+
+nav ul {
+    list-style: none; /*Liste elamanlarının yanındaki yuvarlağı kaldırmak için*/
+    display: flex; /*Listede üst üste gelen li etiketleri yan yana gelmesine yarar.*/
+    column-gap: 20px; /*li etiketleri arasında boşluk bırakmak için kullandım. Bunun yerine margin-left de kullanılabilirdi. Bu da flex özelliğinin bizlere sağladığı bir özellik.*/
+}
+
+nav ul li a:hover { 
+    color: #000; /*Mouse ile üzerine geldiğimde rengi değişsin diye hover özelliğinden yararlandım.*/
+}
+    
+.row{
+    display: flex;
+    align-items: center;
+    column-gap: 10px; /*İçerisindeki divler arasında sağlı sollu boşluk bırakır.*/
+    height: 88%;
+}
+
+.col{
+    flex-basis: 50%;
+}
+
+h1{
+    color: #fff;    
+    font-size: 100px;
+}
+
+.desc{
+    font: size 16px;
+}
+
+.cards{
+    max-width: 500px;
+    margin: auto;
+}
+
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    border: solid red 1px;
+    margin: 10px 15px;
+    position: relative;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    border-color: #fff;
+    transition: ease,0.5s;
+}
+
+.card .card-head{
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.card .card-bottom{
+    position: absolute;
+    bottom: 26px;
+}
+
+.card.card1{
+    background-image: url(images/pic-1.png);
+}
+
+.card.card2{
+    background-image: url(images/pic-2.png);
+}
+
+.card.card3{
+    background-image: url(images/pic-3.png);
+}
+
+.card.card4{
+    background-image: url(images/pic-4.png);
+}
